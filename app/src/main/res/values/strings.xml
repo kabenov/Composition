@@ -1,3 +1,29 @@
 <resources>
     <string name="app_name">Composition</string>
+
+    <string name="logo_description">Welcome logo</string>
+    <string name="welcome_fragment_title">Состав числа</string>
+    <string name="welcome_fragment_content">
+    Правила игры: перед вами будет три фигуры, две снизу и одна сверху, в двух из них будут числа. Необходимо, чтобы сумма чисел из двух нижних фигур была равна числу в верхней фигуре, для этого нужно вставить недостающее число.
+    Пример: в верхнем круге число 7, в одном из нижних знак вопроса, а в другом число 4. Значит на месте вопросительного знака должно быть число 3, потому что 3 + 4 = 7
+    </string>
+    <string name="welcome_fragment_button">Понятно</string>
+
+    <string name="choose_level_fragment_title">Выберите уровень</string>
+    <string name="choose_level_fragment_button_test">Тестовый</string>
+    <string name="choose_level_fragment_button_easy">Легкий</string>
+    <string name="choose_level_fragment_button_normal">Средний</string>
+    <string name="choose_level_fragment_button_hard">Тяжелый</string>
+
+    <string name="game_fragment_question">\?</string>
+
+    <string name="game_fragment_answer_progress">Правильных ответов %s (минимум %s)</string>
+
+    <string name="game_finished_fragment_smile">Game Over</string>
+    <string name="game_finished_fragment_required_answer">Необходимое количество правильных ответов: %s</string>
+    <string name="game_finished_fragment_score_answer">Ваш счет: %s</string>
+    <string name="game_finished_fragment_required_percent">Необходимый процент правильных ответов: %s</string>
+    <string name="game_finished_fragment_percent">Процент правильных ответов: %s</string>
+    <string name="game_finished_fragment_button_retry">Попробовать снова</string>
+
 </resources>
