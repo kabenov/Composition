@@ -23,7 +23,7 @@
     <string name="game_finished_fragment_required_answer">Необходимое количество правильных ответов: %s</string>
     <string name="game_finished_fragment_score_answer">Ваш счет: %s</string>
     <string name="game_finished_fragment_required_percent">Необходимый процент правильных ответов: %s</string>
-    <string name="game_finished_fragment_percent">Процент правильных ответов: %s</string>
+    <string name="game_finished_fragment_score_percent">Процент правильных ответов: %s</string>
     <string name="game_finished_fragment_button_retry">Попробовать снова</string>
 
 </resources>
