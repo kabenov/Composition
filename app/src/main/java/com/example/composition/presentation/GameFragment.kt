@@ -17,11 +17,19 @@ import com.example.composition.domain.entities.GameSettings
 import com.example.composition.domain.entities.Level
 import com.example.composition.domain.entities.Question
 import com.example.composition.presentation.viewmodel.GameViewModel
+import com.example.composition.presentation.viewmodel.GameViewModelFactory
 
 class GameFragment: Fragment() {
 
     private lateinit var level: Level
-    private lateinit var gameViewModel: GameViewModel
+
+    private val gameViewModelFactory by lazy {
+        GameViewModelFactory(requireActivity().application, level)
+    }
+    private val gameViewModel by lazy {
+        ViewModelProvider(this, gameViewModelFactory)[GameViewModel::class.java]
+    }
+
 
     private var _binding: FragmentGameBinding? = null
     private val binding: FragmentGameBinding
@@ -65,17 +73,8 @@ class GameFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        initGameViewModel()
         liveDataObserves()
         setClickListenersToOptions()
-        gameViewModel.startGame(level)
-    }
-
-    private fun initGameViewModel() {
-        gameViewModel = ViewModelProvider(
-            this,
-            AndroidViewModelFactory.getInstance(requireActivity().application)
-        )[GameViewModel::class.java]
     }
 
     private fun liveDataObserves() {
