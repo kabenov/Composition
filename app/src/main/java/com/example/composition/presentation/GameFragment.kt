@@ -64,32 +64,35 @@ class GameFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.gameViewModel = gameViewModel
+        binding.lifecycleOwner = viewLifecycleOwner
+
         liveDataObserves()
-        setClickListenersToOptions()
+//        setClickListenersToOptions()
     }
 
     private fun liveDataObserves() {
-        gameViewModel.formattedTime.observe(viewLifecycleOwner) {
-            setGameTimer(it)
-        }
-        gameViewModel.question.observe(viewLifecycleOwner) {
-            setQuestion(it)
-        }
-        gameViewModel.percentOfRightAnswers.observe(viewLifecycleOwner){
-            setProgress(it)
-        }
-        gameViewModel.progressOfAnswers.observe(viewLifecycleOwner) {
-            setGameAnswersProgress(it)
-        }
-        gameViewModel.enoughCountOfRightAnswers.observe(viewLifecycleOwner) {
-            setGameAnswersColor(it)
-        }
-        gameViewModel.enoughPercentOfRightAnswers.observe(viewLifecycleOwner) {
-            setProgressBarColor(it)
-        }
-        gameViewModel.minPercent.observe(viewLifecycleOwner) {
-            setSecondaryProgressBar(it)
-        }
+//        gameViewModel.formattedTime.observe(viewLifecycleOwner) {
+//            setGameTimer(it)
+//        }
+//        gameViewModel.question.observe(viewLifecycleOwner) {
+//            setQuestion(it)
+//        }
+//        gameViewModel.percentOfRightAnswers.observe(viewLifecycleOwner){
+//            setProgress(it)
+//        }
+//        gameViewModel.progressOfAnswers.observe(viewLifecycleOwner) {
+//            setGameAnswersProgress(it)
+//        }
+//        gameViewModel.enoughCountOfRightAnswers.observe(viewLifecycleOwner) {
+//            setGameAnswersColor(it)
+//        }
+//        gameViewModel.enoughPercentOfRightAnswers.observe(viewLifecycleOwner) {
+//            setProgressBarColor(it)
+//        }
+//        gameViewModel.minPercent.observe(viewLifecycleOwner) {
+//            setSecondaryProgressBar(it)
+//        }
         gameViewModel.gameResult.observe(viewLifecycleOwner) {
             launchGameFinishedFragment(it)
         }
